@@ -1,0 +1,30 @@
+#######################################
+# Syntax Coloring Map For EEPROM
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+FaceApp	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+valid	KEYWORD2
+begin	KEYWORD2
+read	KEYWORD2
+routine	KEYWORD2
+valid	KEYWORD2
+getFace	KEYWORD2
+getRoll	KEYWORD2
+getYaw	KEYWORD2
+getPitch	KEYWORD2
+getY	KEYWORD2
+getX	KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
