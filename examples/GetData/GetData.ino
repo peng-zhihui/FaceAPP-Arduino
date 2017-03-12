@@ -5,7 +5,7 @@
 
 #include <FaceApp.h>
 
-FaceApp obj(Serial, 115200);   //实例化检测对象
+FaceApp obj((HardwareSerial&)Serial, 9600);    //实例化检测对象
 
 void setup()
 {
