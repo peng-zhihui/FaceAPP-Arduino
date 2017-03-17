@@ -2,11 +2,13 @@
 #define FaceApp_h
 #include "Arduino.h"
 #include <inttypes.h>
+#include <SoftwareSerial.h>
 
 class FaceApp
 {
   public:
-    FaceApp(HardwareSerial &uart, uint32_t baud = 9600);
+    FaceApp(SoftwareSerial &uart, uint32_t baud = 9600);
+
     int getX(void);
     int getY(void);
     int getFace(void);
@@ -17,7 +19,7 @@ class FaceApp
     void routine(void);
     bool valid(void);
   private:
-    HardwareSerial *m_puart;
+  	SoftwareSerial *m_puart;
     char comdata[100], data_p; 
     int  dataX, dataY, dataFace;
     float dataRoll,dataYaw,dataPitch;

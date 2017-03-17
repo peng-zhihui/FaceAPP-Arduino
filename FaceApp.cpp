@@ -1,11 +1,11 @@
 #include "FaceApp.h"
 
-
-FaceApp::FaceApp(HardwareSerial &uart, uint32_t baud): m_puart(&uart)
+FaceApp::FaceApp(SoftwareSerial &uart, uint32_t baud): m_puart(&uart)
 {
   _baud = baud;
   _valid = false;
 }
+
 
 void FaceApp::begin(void)
 {

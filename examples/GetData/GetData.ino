@@ -1,15 +1,16 @@
 /*******************************************
   一个个人小项目，配套APP下载以及相关教程见
-  http://pengzhihui.com
+ http://pengzhihui.xyz/2017/02/22/faceapp/
 *******************************************/
-
 #include <FaceApp.h>
 
-FaceApp obj((HardwareSerial&)Serial, 9600);    //实例化检测对象
+SoftwareSerial mySerial(10, 11); // RX为D10, TX为D11，可以自己任意修改
+FaceApp obj((SoftwareSerial&)mySerial, 9600);  //实例化检测对象
 
 void setup()
 {
-  obj.begin();      //初始化,注意:后面不需要再用Serial.begin()!
+  obj.begin();      //初始化
+  Serial.begin(9600);  //硬件串口用于调试
 }
 
 void loop()
